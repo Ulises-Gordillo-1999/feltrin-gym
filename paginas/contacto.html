@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <!-- Meta charset para la codificación de caracteres -->
+    <meta charset="UTF-8" />
+    <!-- Meta para la vista responsiva, ajusta la escala de la página -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- Icono de la página -->
+    <link rel="shortcut icon" href="../icono1.png" />
+    <!-- Script para integrar Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- Título de la página -->
+    <title>Feltrin Gym</title>
+  </head>
+  <body>
+    <!-- Encabezado del sitio -->
+    <header class="bg-zinc-900">
+      <!-- Barra de navegación -->
+      <nav class="bg-gray-800 text-slate-300 font-serif text-xl">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <!-- Contenedor de la barra de navegación -->
+          <div class="flex justify-between items-center h-16">
+            <!-- Nombre del gimnasio -->
+            <div class="text-2xl font-bold"><a href="../home.html">Feltrin Gym</a></div>
+            <!-- Menú de navegación para pantallas medianas y grandes -->
+            <div class="hidden md:flex space-x-10">
+              <a href="/home.html" class="hover:text-white">Home</a>
+              <a href="/paginas/servicios.html" class="hover:text-white">Servicios</a>
+              <a href="/paginas/acercaDe.html" class="hover:text-white">Acerca de Nosotros</a>
+              <a href="/paginas/contacto.html" class="hover:text-white">Contacto</a>
+            </div>
+            <!-- Menú para dispositivos móviles (hamburguesa) -->
+            <div class="md:hidden">
+              <button id="menu-toggle" class="text-white focus:outline-none">
+                &#9776;
+              </button>
+            </div>
+          </div>
+        </div>
+        <!-- Menú desplegable para dispositivos móviles -->
+        <div id="mobile-menu" class="hidden md:hidden bg-gray-700 text-center py-4">
+          <a href="/home.html" class="block py-2">Home</a>
+          <a href="/paginas/servicios.html" class="block py-2">Servicios</a>
+          <a href="/paginas/acercaDe.html" class="block py-2">Acerca de Nosotros</a>
+          <a href="/paginas/contacto.html" class="block py-2">Contacto</a>
+        </div>
+      </nav>
+    </header>
+
+    <!-- Cuerpo principal -->
+    <main class="bg-[#0d0d0d] py-12 flex justify-center px-4">
+      <!-- Formulario de contacto -->
+      <section class="w-full max-w-lg bg-zinc-300 p-6 rounded-lg shadow-lg">
+        <form method="GET" id="form_1" action="" class="flex flex-col space-y-4">
+          <!-- Título del formulario -->
+          <h1 class="text-center text-3xl font-bold pb-4">Contáctenos</h1>
+          
+          <!-- Campo para nombre -->
+          <label for="nombre" class="text-lg font-medium">Nombre</label>
+          <input type="text" id="nombre" class="p-3 rounded-md border border-gray-400 focus:outline-none focus:ring-2 focus:ring-green-500" required />
+          
+          <!-- Campo para email -->
+          <label for="email" class="text-lg font-medium">Email</label>
+          <input type="email" id="email" class="p-3 rounded-md border border-gray-400 focus:outline-none focus:ring-2 focus:ring-green-500" required />
+          
+          <!-- Campo para teléfono -->
+          <label for="tel" class="text-lg font-medium">Teléfono</label>
+          <input type="tel" id="tel" class="p-3 rounded-md border border-gray-400 focus:outline-none focus:ring-2 focus:ring-green-500" required />
+          
+          <!-- Campo para consulta -->
+          <label for="text" class="text-lg font-medium">Consulta</label>
+          <textarea id="text" rows="4" class="p-3 rounded-md border border-gray-400 focus:outline-none focus:ring-2 focus:ring-green-500" required></textarea>
+          
+          <!-- Botón para enviar formulario -->
+          <button
+            id="button_contacto_formulario"
+            type="submit"
+            class="bg-[#0d0d0d] p-4 rounded-lg text-slate-200 font-semibold transition duration-300 hover:bg-green-800 text-lg"
+          >
+            ENVIAR
+          </button>
+        </form>
+      </section>
+    </main>
+
+    <!-- Pie de página -->
+    <footer class="bg-[#0d0d0d] shadow-sm p-6 text-center text-gray-500">
+      <!-- Logo en el pie de página -->
+      <a href="../home.html"><img src="../icono1.png" class="h-8 mx-auto mb-2" alt="Feltrin Logo" /></a>
+      <p>&copy; 2025 Feltrin Gym. Todos los derechos reservados.</p>
+      <!-- Enlaces de navegación del pie de página -->
+      <div class="mt-4 flex justify-center space-x-6 text-sm">
+        <a href="acercaDe.html" class="hover:underline">Acerca de nosotros</a>
+        <a href="servicios.html" class="hover:underline">Servicios</a>
+        <a href="contacto.html" class="hover:underline">Contacto</a>
+      </div>
+    </footer>
+
+    <!-- Script para el menú móvil -->
+    <script>
+      // Función para mostrar y ocultar el menú en dispositivos móviles
+      document
+        .getElementById("menu-toggle")
+        .addEventListener("click", function () {
+          document.getElementById("mobile-menu").classList.toggle("hidden");
+        });
+    </script>
+  </body>
+</html>

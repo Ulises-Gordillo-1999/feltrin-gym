@@ -1,0 +1,123 @@
+<html lang="es">
+  <head>
+    <!-- Definición de la codificación de caracteres -->
+    <meta charset="UTF-8" />
+    <!-- Asegura que la vista se ajusta según el tamaño de pantalla del dispositivo -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- Icono de la página -->
+    <link rel="shortcut icon" href="icono1.png" />
+    <!-- Inclusión de Tailwind CSS desde CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- Título de la página -->
+    <title>Feltrin Gym</title>
+  </head>
+  <body>
+    <!-- Encabezado del sitio -->
+    <header class="bg-zinc-900">
+      <!-- Barra de navegación -->
+      <nav class="bg-gray-800 text-slate-300 font-serif text-xl">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <!-- Contenedor de la barra de navegación -->
+          <div class="flex justify-between items-center h-16">
+            <!-- Nombre del gimnasio -->
+            <div class="text-2xl font-bold"><a href="/home.html">Feltrin Gym</a></div>
+            <!-- Menú de navegación para pantallas medianas y grandes -->
+            <div class="hidden md:flex space-x-10">
+              <a href="/home.html" class="hover:text-white">Home</a>
+              <a href="/paginas/servicios.html" class="hover:text-white">Servicios</a>
+              <a href="/paginas/acercaDe.html" class="hover:text-white">Acerca de Nosotros</a>
+              <a href="/paginas/contacto.html" class="hover:text-white">Contacto</a>
+            </div>
+            <!-- Menú para dispositivos móviles (hamburguesa) -->
+            <div class="md:hidden">
+              <button id="menu-toggle" class="text-white focus:outline-none">
+                &#9776;
+              </button>
+            </div>
+          </div>
+        </div>
+        <!-- Menú desplegable para dispositivos móviles -->
+        <div id="mobile-menu" class="hidden md:hidden bg-gray-700 text-center py-4">
+          <a href="/home.html" class="block py-2">Home</a>
+          <a href="/paginas/servicios.html" class="block py-2">Servicios</a>
+          <a href="/paginas/acercaDe.html" class="block py-2">Acerca de Nosotros</a>
+          <a href="/paginas/contacto.html" class="block py-2">Contacto</a>
+        </div>
+      </nav>
+    </header>
+
+    <!-- Contenido principal de la página -->
+    <main>
+      <!-- Imagen de fondo principal -->
+      <div class="h-screen">
+        <img
+          src="./imagenes/feltrin.jpg"
+          alt="feltrin gimnasio"
+          class="w-full h-full object-cover"
+        />
+      </div>
+
+      <!-- Sección de comunicate con nuestro equipo -->
+      <div class="flex flex-col h-64 bg-zinc-900 justify-center items-center text-center px-4 text-slate-300">
+        <h1 class="text-2xl py-2">COMUNICATE HOY CON NUESTRO EQUIPO</h1>
+        <h3 class="text-lg py-2">Empieza a cambiar tu estilo de vida</h3>
+        <!-- Botón de contacto -->
+        <a
+          href="/paginas/contacto.html"
+          class="mt-4 px-6 py-3 bg-green-400 hover:bg-green-600 hover:-translate-y-3 transition duration-400 rounded-lg text-stone-950"
+          >CONTACTANOS</a
+        >
+      </div>
+
+      <!-- Sección de entrenamientos -->
+      <div class="flex flex-col md:flex-row h-auto bg-[#0d0d0d] p-6">
+        <!-- Imagen promocional de entrenamientos -->
+        <img
+          src="./imagenes/feltrin-extra.jpeg"
+          alt="feltrin gimnasio publicidad"
+          class="w-full md:w-1/2 object-cover rounded-lg"
+        />
+        <!-- Descripción de los entrenamientos -->
+        <div class="flex flex-col justify-center items-center text-center md:w-1/2 p-4">
+          <h1 class="text-4xl font-bold my-4 text-green-400">ENTRENAMIENTOS</h1>
+          <p class="text-slate-300">
+            En Feltrin Gym, ofrecemos entrenamientos personalizados
+            para ayudarte a alcanzar tus metas de salud y bienestar. Con
+            programas diseñados por expertos, podrás mejorar tu fuerza,
+            resistencia y condición física en un ambiente motivador y
+            profesional. ¡Ven y transforma tu cuerpo con nosotros!
+          </p>
+          <!-- Botón para conocer más sobre los entrenamientos -->
+          <a
+            href="./paginas/servicios.html"
+            class="mt-4 px-6 py-3 bg-green-400 hover:-translate-y-3 hover:bg-green-600 transition duration-400 rounded-lg text-stone-950"
+            >CONOCE NUESTROS ENTRENAMIENTOS</a
+          >
+        </div>
+      </div>
+    </main>
+
+    <!-- Pie de página -->
+    <footer class="bg-[#0d0d0d] shadow-sm p-6 text-center text-gray-500">
+      <!-- Logo en el pie de página -->
+       <a href="/home.html"><img src="../icono1.png" class="h-8 mx-auto mb-2" alt="Feltrin Logo" /></a>
+      <p>&copy; 2025 Feltrin Gym. Todos los derechos reservados.</p>
+      <!-- Enlaces de navegación del pie de página -->
+      <div class="mt-4 flex justify-center space-x-6 text-sm">
+        <a href="./paginas/acercaDe.html" class="hover:underline">Acerca de nosotros</a>
+        <a href="./paginas/servicios.html" class="hover:underline">Servicios</a>
+        <a href="./paginas/contacto.html" class="hover:underline">Contacto</a>
+      </div>
+    </footer>
+
+    <!-- Script para el menú móvil -->
+    <script>
+      // Función para mostrar y ocultar el menú en dispositivos móviles
+      document
+        .getElementById("menu-toggle")
+        .addEventListener("click", function () {
+          document.getElementById("mobile-menu").classList.toggle("hidden");
+        });
+    </script>
+  </body>
+</html>

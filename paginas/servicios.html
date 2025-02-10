@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <!-- Definición de la codificación de caracteres -->
+    <meta charset="UTF-8" />
+    <!-- Asegura que la vista se ajusta según el tamaño de pantalla del dispositivo -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- Icono de la página -->
+    <link rel="shortcut icon" href="../icono1.png" />
+    <!-- Inclusión de Tailwind CSS desde CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- Título de la página -->
+    <title>Feltrin Gym</title>
+  </head>
+  <body>
+    <!-- Encabezado del sitio -->
+    <header class="bg-zinc-900">
+      <!-- Barra de navegación -->
+      <nav class="bg-gray-800 text-slate-300 font-serif text-xl">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <!-- Contenedor de la barra de navegación -->
+          <div class="flex justify-between items-center h-16">
+            <!-- Nombre del gimnasio -->
+            <div class="text-2xl font-bold"><a href="../home.html">Feltrin Gym</a></div>
+            <!-- Menú de navegación para pantallas medianas y grandes -->
+            <div class="hidden md:flex space-x-10">
+              <a href="/home.html" class="hover:text-white">Home</a>
+              <a href="/paginas/servicios.html" class="hover:text-white">Servicios</a>
+              <a href="/paginas/acercaDe.html" class="hover:text-white">Acerca de Nosotros</a>
+              <a href="/paginas/contacto.html" class="hover:text-white">Contacto</a>
+            </div>
+            <!-- Menú para dispositivos móviles (hamburguesa) -->
+            <div class="md:hidden">
+              <button id="menu-toggle" class="text-white focus:outline-none">
+                &#9776;
+              </button>
+            </div>
+          </div>
+        </div>
+        <!-- Menú desplegable para dispositivos móviles -->
+        <div id="mobile-menu" class="hidden md:hidden bg-gray-700 text-center py-4">
+          <a href="/home.html" class="block py-2">Home</a>
+          <a href="/paginas/servicios.html" class="block py-2">Servicios</a>
+          <a href="/paginas/acercaDe.html" class="block py-2">Acerca de Nosotros</a>
+          <a href="/paginas/contacto.html" class="block py-2">Contacto</a>
+        </div>
+      </nav>
+    </header>
+
+    <!-- Sección principal con el contenido de la página -->
+    <main class="bg-[#0d0d0d] py-8 px-4">
+      <!-- Título y descripción principal de los entrenamientos -->
+      <div class="text-white text-center max-w-4xl mx-auto">
+        <h1 class="font-bold text-3xl md:text-4xl my-4 text-[#00f8b6ff]">
+          CONOCE NUESTRA CATEGORÍA DE ENTRENAMIENTOS
+        </h1>
+        <p class="text-sm md:text-base">
+          En Feltrin Gym, ofrecemos entrenamientos personalizados para
+          ayudarte a alcanzar tus metas de salud y bienestar. Con programas
+          diseñados por expertos, podrás mejorar tu fuerza, resistencia y
+          condición física en un ambiente motivador y profesional. ¡Ven y
+          transforma tu cuerpo con nosotros!
+        </p>
+      </div>
+
+      <!-- Contenedor de categorías de entrenamientos con imágenes -->
+      <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-6 mt-6 max-w-6xl mx-auto">
+        <!-- Categoría de entrenamiento personalizado -->
+        <div class="relative group">
+          <img
+            class="w-full rounded-lg opacity-20 group-hover:opacity-60 transition duration-300"
+            src="../imagenes/categoria1.jpeg"
+            alt="Entrenamiento Personalizado"
+          />
+          <h2
+            class="absolute inset-0 flex items-center justify-center text-white text-lg md:text-xl font-bold group-hover:text-2xl group-hover:text-[#00f8b6ff] transition duration-300"
+          >
+            ENTRENAMIENTO PERSONALIZADO
+          </h2>
+        </div>
+        <!-- Categoría de pentatlón moderno -->
+        <div class="relative group">
+          <img
+            class="w-full rounded-lg opacity-20 group-hover:opacity-60 transition duration-300"
+            src="../imagenes/categoria2.jpeg"
+            alt="Pentatlón Moderno"
+          />
+          <h2
+            class="absolute inset-0 flex items-center justify-center text-white text-lg md:text-xl font-bold group-hover:text-2xl group-hover:text-[#00f8b6ff] transition duration-300"
+          >
+            PENTATLÓN MODERNO
+          </h2>
+        </div>
+        <!-- Categoría de musculación -->
+        <div class="relative group">
+          <img
+            class="w-full rounded-lg opacity-20 group-hover:opacity-60 transition duration-300"
+            src="../imagenes/categoria3.jpeg"
+            alt="Musculación"
+          />
+          <h2
+            class="absolute inset-0 flex items-center justify-center text-white text-lg md:text-xl font-bold group-hover:text-2xl group-hover:text-[#00f8b6ff] transition duration-300"
+          >
+            MUSCULACIÓN
+          </h2>
+        </div>
+        <!-- Categoría de entrenamiento libre -->
+        <div class="relative group">
+          <img
+            class="w-full rounded-lg opacity-20 group-hover:opacity-60 transition duration-300"
+            src="../imagenes/categoria4.jpeg"
+            alt="Entrenamiento Libre"
+          />
+          <h2
+            class="absolute inset-0 flex items-center justify-center text-white text-lg md:text-xl font-bold group-hover:text-2xl group-hover:text-[#00f8b6ff] transition duration-300"
+          >
+            ENTRENAMIENTO LIBRE
+          </h2>
+        </div>
+        <!-- Categoría de OCR Kids -->
+        <div class="relative group">
+          <img
+            class="w-full rounded-lg opacity-20 group-hover:opacity-60 transition duration-300"
+            src="../imagenes/categoria5.jpeg"
+            alt="OCR Kids"
+          />
+          <h2
+            class="absolute inset-0 flex items-center justify-center text-white text-lg md:text-xl font-bold group-hover:text-2xl group-hover:text-[#00f8b6ff] transition duration-300"
+          >
+            OCR KIDS
+          </h2>
+        </div>
+      </div>
+    </main>
+
+    <!-- Pie de página -->
+    <footer class="bg-[#0d0d0d] shadow-sm p-6 text-center text-gray-500">
+      <!-- Logo en el pie de página -->
+       <a href="../home.html"><img src="../icono1.png" class="h-8 mx-auto mb-2" alt="Feltrin Logo" /></a>
+      <p>&copy; 2025 Feltrin Gym. Todos los derechos reservados.</p>
+      <!-- Enlaces de navegación del pie de página -->
+      <div class="mt-4 flex justify-center space-x-6 text-sm">
+        <a href="acercaDe.html" class="hover:underline">Acerca de nosotros</a>
+        <a href="servicios.html" class="hover:underline">Servicios</a>
+        <a href="contacto.html" class="hover:underline">Contacto</a>
+      </div>
+    </footer>
+    <!-- Script para el menú móvil -->
+    <script>
+      // Función para mostrar y ocultar el menú en dispositivos móviles
+      document
+        .getElementById("menu-toggle")
+        .addEventListener("click", function () {
+          document.getElementById("mobile-menu").classList.toggle("hidden");
+        });
+    </script>
+  </body>
+</html>
